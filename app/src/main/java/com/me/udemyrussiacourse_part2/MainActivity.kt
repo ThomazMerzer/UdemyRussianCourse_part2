@@ -1,5 +1,6 @@
 package com.me.udemyrussiacourse_part2
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
@@ -13,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        title = "Tom and Jerry"
+        title = "Animation"
     }
 
     fun eraseTom(view: View) {
@@ -35,5 +36,10 @@ class MainActivity : AppCompatActivity() {
     fun returnToDefault() {
         img_center1.rotation = 0f
         img_center2.rotation = 0f
+    }
+
+    fun nextPage(view: View) {
+        val nextPage = Intent(this, SecondActivity::class.java)
+        startActivity(nextPage)
     }
 }

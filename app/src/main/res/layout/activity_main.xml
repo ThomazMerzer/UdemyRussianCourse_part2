@@ -9,30 +9,40 @@
 
     <ImageView
         android:id="@+id/img_center1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:src="@drawable/cat_tom"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:alpha="1"
-        android:scaleY="1"
+        android:onClick="eraseTom"
         android:scaleX="1"
-        app:layout_constraintTop_toTopOf="parent"
+        android:scaleY="1"
+        android:src="@drawable/cat_tom"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="eraseTom"/>
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
         android:id="@+id/img_center2"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:alpha="0"
+        android:onClick="eraseTom"
+        android:scaleX="0.1"
+        android:scaleY="0.1"
+        android:src="@drawable/mouse_jerry"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_intent_from_main_activity"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:src="@drawable/mouse_jerry"
-        android:alpha="0"
-        android:scaleY="0.1"
-        android:scaleX="0.1"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:onClick="eraseTom"/>
+        android:onClick="nextPage"
+        android:text="Next page"
+        app:layout_constraintEnd_toEndOf="@id/img_center1"
+        app:layout_constraintStart_toStartOf="@+id/img_center1"
+        app:layout_constraintTop_toBottomOf="@id/img_center1" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
