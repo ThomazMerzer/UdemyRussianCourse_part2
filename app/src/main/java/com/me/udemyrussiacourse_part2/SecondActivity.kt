@@ -20,8 +20,7 @@ class SecondActivity : AppCompatActivity() {
     }
 
     fun initVideo() {
-        val path = "android.resource://$packageName/" + R.raw.samplevideo
-        //TODO Find solution, that app can't play mp4 format
+        val path = "android.resource://$packageName/" + R.raw.small
         videoView.setVideoURI(Uri.parse(path))
 
         val mediaController = MediaController(this)
