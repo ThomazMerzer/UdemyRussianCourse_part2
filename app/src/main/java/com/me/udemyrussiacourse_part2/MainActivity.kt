@@ -39,7 +39,7 @@ class MainActivity : AppCompatActivity() {
     }
 
     fun nextPage(view: View) {
-        val nextPage = Intent(this, FourthActivity::class.java)
+        val nextPage = Intent(this, SecondActivity::class.java)
         startActivity(nextPage)
     }
 }
