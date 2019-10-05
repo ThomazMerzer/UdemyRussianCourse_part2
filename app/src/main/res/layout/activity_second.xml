@@ -17,4 +17,14 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"/>
 
+    <Button
+        android:id="@+id/btn_intent_from_second_activity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/videov_center"
+        app:layout_constraintStart_toStartOf="@+id/videov_center"
+        app:layout_constraintEnd_toEndOf="@+id/videov_center"
+        android:text="Next screen"
+        android:onClick="nextPage2"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
