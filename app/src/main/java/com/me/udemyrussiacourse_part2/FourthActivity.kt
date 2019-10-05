@@ -18,7 +18,7 @@ class FourthActivity : AppCompatActivity() {
 
 
     fun initVideof() {
-        val videoPathh = "android.resource://$packageName/" + R.raw.untitled
+        val videoPathh = "android.resource://$packageName/" + R.raw.demo
 
         val mediaController = MediaController(this)
         mediaController.setAnchorView(video_top)
