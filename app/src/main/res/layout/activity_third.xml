@@ -27,4 +27,22 @@
         app:layout_constraintEnd_toEndOf="parent"
         android:onClick="stopMusic"/>
 
+    <SeekBar
+        android:id="@+id/skbrVolume"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/btnStopMusic"
+        app:layout_constraintStart_toStartOf="@+id/btnStopMusic"
+        app:layout_constraintEnd_toEndOf="@id/btnStopMusic"/>
+
+    <TextView
+        android:id="@+id/txvVolume"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        app:layout_constraintTop_toBottomOf="@+id/skbrVolume"
+        app:layout_constraintStart_toStartOf="@id/skbrVolume"
+        app:layout_constraintEnd_toEndOf="@id/skbrVolume"/>
+
 </androidx.constraintlayout.widget.ConstraintLayout>
