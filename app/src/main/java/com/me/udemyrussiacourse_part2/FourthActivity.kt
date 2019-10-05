@@ -18,22 +18,13 @@ class FourthActivity : AppCompatActivity() {
 
 
     fun initVideof() {
-        val videoPathh = "android.resource://$packageName/" + R.raw.small
+        val videoPathh = "android.resource://$packageName/" + R.raw.untitled
 
         val mediaController = MediaController(this)
         mediaController.setAnchorView(video_top)
         mediaController.setMediaPlayer(video_top)
         video_top.setMediaController(mediaController)
         video_top.setVideoURI(Uri.parse(videoPathh))
-
-        video_top.setOnPreparedListener {
-//            val lp = video_top.layoutParams
-//            val videoWidth = it.videoWidth
-//            val videoHeight = it.videoHeight
-//            val viewWidth = video_top.width
-//            lp.height = (viewWidth * (videoHeight / videoWidth))
-//            video_top.layoutParams = lp
-            video_top.start()
-        }
+        video_top.start()
     }
 }
