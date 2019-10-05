@@ -13,7 +13,7 @@ class FourthActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_fourth)
 
-        
+        initVideof()
     }
 
 
