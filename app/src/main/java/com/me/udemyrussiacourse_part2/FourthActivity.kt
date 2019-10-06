@@ -9,12 +9,15 @@ import android.view.View
 import android.widget.SeekBar
 import androidx.appcompat.widget.Toolbar
 import kotlinx.android.synthetic.main.activity_fourth.*
+import java.util.*
 
 class FourthActivity : AppCompatActivity() {
 
     lateinit var mediaPlayer: MediaPlayer
     lateinit var audioManager: AudioManager
     lateinit var musicToolBar: Toolbar
+    lateinit var timer: Unit
+    var songTitle = ""
     var currentSong = 0
     var maxVolume = 0
 
@@ -28,10 +31,11 @@ class FourthActivity : AppCompatActivity() {
 
         currentSong = R.raw.stuff
         setSong(currentSong)
-        prepareSeekBar()
+        prepareVolumeSeekBar()
+        prepareSongLenghtSeekbar()
     }
 
-    fun prepareSeekBar() {
+    fun prepareVolumeSeekBar() {
         audioManager = getSystemService(Context.AUDIO_SERVICE) as AudioManager
         maxVolume = audioManager.getStreamMaxVolume(AudioManager.STREAM_MUSIC)
         skbrSongVolume.max = maxVolume
@@ -49,6 +53,31 @@ class FourthActivity : AppCompatActivity() {
             override fun onStopTrackingTouch(p0: SeekBar?) {
             }
         })
+    }
+
+    fun prepareSongLenghtSeekbar() {
+        skbrSongLength.max = mediaPlayer.duration
+        skbrSongLength.setOnSeekBarChangeListener(object: SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(p0: SeekBar?, progress: Int, p2: Boolean) {
+                when(p2) {
+                    true -> mediaPlayer.seekTo(progress)
+                }
+            }
+
+            override fun onStartTrackingTouch(p0: SeekBar?) {
+            }
+
+            override fun onStopTrackingTouch(p0: SeekBar?) {
+            }
+        })
+    }
+
+    fun startTrackMusicDuration() {
+        Timer().scheduleAtFixedRate(object : TimerTask() {
+            override fun run() {
+                skbrSongLength.progress = mediaPlayer.currentPosition
+            }
+        }, 0, 500)
     }
 
     fun changeMusicStreamVolume(i: Int) {
@@ -88,13 +117,14 @@ class FourthActivity : AppCompatActivity() {
             }
             else -> {
                 mediaPlayer.start()
+                startTrackMusicDuration()
                 btnPlayStopSong.setImageResource(R.drawable.icon_pause_song)
             }
         }
     }
 
     fun setSongTitle(){
-        val songTitle = resources.getResourceEntryName(currentSong)
+        songTitle = resources.getResourceEntryName(currentSong)
         txvSongName.text = songTitle
     }
 }
