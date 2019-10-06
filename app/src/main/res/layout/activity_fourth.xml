@@ -85,24 +85,27 @@
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_gravity="start|center_vertical"
+            android:onClick="previousSong"
             android:background="@drawable/music_player_buttons_background"
             android:src="@drawable/icon_previous_song" />
 
         <ImageView
-            android:id="@+id/btnNextSong"
+            android:id="@+id/btnPlayStopSong"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_gravity="center"
             android:layout_marginStart="35dp"
             android:layout_marginEnd="35dp"
+            android:onClick="playStopSong"
             android:background="@drawable/music_player_buttons_background"
             android:src="@drawable/icon_play_song" />
 
         <ImageView
-            android:id="@+id/btnPlaySong"
+            android:id="@+id/btnNextSong"
             android:layout_width="65dp"
             android:layout_height="65dp"
             android:layout_gravity="end|center_vertical"
+            android:onClick="nextSong"
             android:background="@drawable/music_player_buttons_background"
             android:src="@drawable/icon_next_song" />
 
