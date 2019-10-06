@@ -1,6 +1,7 @@
 package com.me.udemyrussiacourse_part2
 
 import android.content.Context
+import android.content.Intent
 import android.media.AudioManager
 import android.media.MediaPlayer
 import androidx.appcompat.app.AppCompatActivity
@@ -71,5 +72,10 @@ class ThirdActivity : AppCompatActivity() {
         mediaPlayer.stop()
         btnPlayPause.text = "Play"
         mediaPlayer = MediaPlayer.create(baseContext, R.raw.stuff)
+    }
+
+    fun nextPage(view: View) {
+        val nextPage = Intent(this, FourthActivity::class.java)
+        startActivity(nextPage)
     }
 }

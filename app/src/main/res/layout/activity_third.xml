@@ -6,6 +6,27 @@
     android:layout_height="match_parent"
     tools:context=".ThirdActivity">
 
+    <ImageView
+        android:id="@+id/imgBackground"
+        android:layout_width="300dp"
+        android:layout_height="300dp"
+        app:layout_constraintTop_toTopOf="@id/imgBlueMusic"
+        app:layout_constraintStart_toStartOf="@id/imgBlueMusic"
+        app:layout_constraintEnd_toEndOf="@id/imgBlueMusic"
+        app:layout_constraintBottom_toBottomOf="@id/imgBlueMusic"
+        android:background="@drawable/circle_background"/>
+
+    <ImageView
+        android:id="@+id/imgBlueMusic"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:src="@drawable/ic_queue_music_blue_24dp"
+        app:layout_constraintBottom_toTopOf="@id/btnPlayPause"
+        app:layout_constraintStart_toStartOf="@id/btnPlayPause"
+        app:layout_constraintEnd_toEndOf="@id/btnPlayPause"
+        android:layout_marginBottom="20dp"
+        android:background="@drawable/circle_background"/>
+
     <Button
         android:id="@+id/btnPlayPause"
         android:layout_width="wrap_content"
@@ -44,5 +65,15 @@
         app:layout_constraintTop_toBottomOf="@+id/skbrVolume"
         app:layout_constraintStart_toStartOf="@id/skbrVolume"
         app:layout_constraintEnd_toEndOf="@id/skbrVolume"/>
+
+    <Button
+        android:id="@+id/nextScreen"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="nextPage"
+        android:text="Next page"
+        app:layout_constraintTop_toBottomOf="@+id/txvVolume"
+        app:layout_constraintStart_toStartOf="@id/txvVolume"
+        app:layout_constraintEnd_toEndOf="@id/txvVolume"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
