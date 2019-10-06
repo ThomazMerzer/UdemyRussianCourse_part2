@@ -3,4 +3,7 @@
     <color name="colorPrimary">#008577</color>
     <color name="colorPrimaryDark">#00574B</color>
     <color name="colorAccent">#D81B60</color>
+    <color name="musicPlayerTextAndIcons">#F67C00</color>
+    <color name="musicPlayerShapes">#0738E2</color>
+    <color name="musicPlayerTextBackground">#07055A</color>
 </resources>
