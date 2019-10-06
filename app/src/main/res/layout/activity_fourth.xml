@@ -17,7 +17,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:titleTextColor="@color/musicPlayerTextAndIcons"
         app:title="Music Player"
-        style="@style/ToolBar"/>
+        android:background="@color/musicPlayerShapes"/>
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/layoutCenterIcon"

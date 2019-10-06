@@ -10,8 +10,4 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="ToolBar" parent="Theme.AppCompat.Light.NoActionBar">
-        <item name="android:background">#0738E2</item>
-    </style>
-
 </resources>
