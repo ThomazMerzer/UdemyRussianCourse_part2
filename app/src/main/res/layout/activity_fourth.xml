@@ -65,8 +65,8 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@id/txvSongName"
-        android:thumb="@drawable/custom_thumb"
-        android:progressDrawable="@drawable/custom_progress" />
+        android:thumb="@drawable/custom_seekbar_thumb_circle"
+        android:progressDrawable="@drawable/custom_seekbar_progress" />
 
     <SeekBar
         android:id="@+id/skbrSongLength"
@@ -75,8 +75,8 @@
         android:layout_marginStart="40dp"
         android:layout_marginEnd="40dp"
         android:maxHeight="4dp"
-        android:thumb="@drawable/custom_thumb_rectangle"
-        android:progressDrawable="@drawable/custom_progress"
+        android:thumb="@drawable/custom_seekbar_thumb_rectangle"
+        android:progressDrawable="@drawable/custom_seekbar_progress"
         app:layout_constraintTop_toBottomOf="@id/skbrSongVolume"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
